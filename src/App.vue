@@ -1,28 +1,34 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div id="aa" >
+  <button @click="a=!a">开启人脸识别</button>
+  <Start v-show="a"></Start>
+</div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Start from './components/Start.vue';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  components: { Start },
+  name:'App',
+  comments:{
+    Start
+  },
+  data() {
+    return {
+      a:false
+    }
+  },
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
+</script > 
+
+<style >
+  #aa{
+    width:400px;
+    height: 400px;
+    margin: 50px auto;
+  }
+
 </style>
